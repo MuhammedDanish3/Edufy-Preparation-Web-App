@@ -31,3 +31,26 @@ loginLink.addEventListener('click', function() {
     window.location.href = 'login.html';
 });
 
+
+// Get the account link element by its ID
+const accountLink = document.getElementById('accountLink');
+
+// Add a click event listener to the account link
+accountLink.addEventListener('click', function() {
+    // Check the user type stored in session or local storage
+    const userType = localStorage.getItem('userType');
+     // Assuming userType is stored in local storage
+
+    // Redirect the user to the appropriate dashboard based on their user type
+    if (userType === 'student') {
+        window.location.href = 'student_dashboard.html';
+    } else if (userType === 'teacher') {
+        window.location.href = 'teacher_dashboard.html';
+    } else {
+        // Handle the case where the user type is not set or unknown
+        alert('User type not recognized. Please log in again.');
+        // Redirect to login page or handle appropriately
+        window.location.href = 'login.html'; // login page
+    }
+});
+
