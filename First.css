@@ -131,6 +131,19 @@ nav a:hover, .dropdown:hover .dropbtn {
     font-weight: 400;
     /* border-bottom: 2px solid #ddd; Add a border for visual separation */
 }
+.login-line .login-link strong {
+    border: 1px solid #d4e8e7;
+    border-radius: 10px;
+    padding: 1px 3px;
+    background-color: #d4e8e7;
+    cursor: pointer;
+}
+.login-line .login-link strong:hover {
+    
+    background-color: #3aafa9;
+    padding: 2px 5px;
+    border-radius: 14px;
+}
 
 .content-container {
     width: 90%; 
@@ -170,6 +183,7 @@ nav a:hover, .dropdown:hover .dropbtn {
     margin-top: 0;
     margin-left: 20px;
     border-radius: 8px;
+    
 }
 .content .button:hover {
     color:#3aafa9;
@@ -610,25 +624,34 @@ nav a:hover, .dropdown:hover .dropbtn {
     display: flex;
     height: 50vh;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
     gap: 3.5rem;
     padding: 0px;
     align-items: baseline;
 }
-/* 
+ 
 .footer-row .footer-col {
-    flex: 0 1 calc(33.33% - 20px);  Adjust the width for medium screens (tablet)
-    margin-bottom: 20px; Add space between columns
-} */
+
+    margin-left: 100px;
+    
+} 
 
 .footer-row .footer-col h4 {
     color: #000000;
     font-size: 1.5em;
     font-weight: bolder;
   }
- 
+.footer-row .footer-col p {
+    color: #000000;
+    font-size: 1.1em;
+    text-decoration: none;
+  }
+  .links {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+}
 .footer-col .links li {
-    list-style: none;
+    list-style: none; 
     margin-bottom: 10px;
 
 }
@@ -644,13 +667,28 @@ ul.links {
 .footer-col .links li a {
     text-decoration: none;
     color: #000000;
-    font-weight: 450;
-    text-align: left;
-  }
-  
+    /* font-weight: 500; */
+    font-size: 1.1em; 
+    
+
+ } 
   .footer-col .links li a:hover {
     color: #fff;
+  } 
+  .material-icons  {
+    color: #000000;
+    margin: 0px 0px;
+    height: 20%;
+    width: 15%;
+    
+    
   }
+  .footer-col .links li i {
+    color: #d4e8e7;
+    margin-right: 5px;
+  } 
+
+
   
   
   /* @media (max-width: 768px) {
