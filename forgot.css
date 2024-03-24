@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto condensed' , sans-serif;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background: linear-gradient(to right, #e2e2e2 , #DEF2F1);
+}
+.container{
+    width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+.title_section{
+    margin-bottom: 30px;
+}
+.title{
+    color: #3AAFA9;
+    font-size: 28px;
+    font-size: 500;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.para{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    
+}
+.input_group{
+    position: relative;
+}
+.input_group input{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #EAECF0;
+    border-radius: 2px;
+    color: #3AAFA9;
+    background-color: #DEF2F1;
+    padding: 10px 15px;
+    outline: none;
+    margin-bottom: 28px;
+}
+.input_group input::placeholder{
+    color: #3AAFA9;
+    font-size: 18px;
+    font-weight: 400;
+}
+.input_group .icon{
+    position: absolute;
+    color: #3AAFA9;
+    right: 13px;
+    margin: 0.5rem 0 0.5rem 16rem;
+    text-align: center;
+    font-size: 25px;
+}
+.submit{
+    width: 100%;
+    background-color: #3AAFA9;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 13px 24px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.submit:hover{
+    opacity: 0.95;
+}

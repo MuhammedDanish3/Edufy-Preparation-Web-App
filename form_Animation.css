@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto condensed' , sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    background: linear-gradient(to right, #e2e2e2 , #DEF2F1);
+}
+.container{
+    position: relative;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+.container p{
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+.container a{
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+.container button{
+    background-color: #3AAFA9;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px 35px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.container button.hidden{
+    background-color: transparent;
+    border-color: #ffffff;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 0 40px;
+    height: 100%;    
+}
+.container input{
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    color: #3AAFA9;
+    background-color: #DEF2F1;
+    margin: 8px 0;
+    padding: 10px 15px;
+    outline: none;
+}
+.container input::placeholder{
+    color: #3AAFA9;
+}
+
+input[type="text"] + i ,
+input[type="email"] + i ,
+input[type="password"] + i
+{
+    color: #3AAFA9;
+    margin: -2.3rem 0 0.6rem 16rem;
+}
+
+@media screen and (max-width: 768px){
+    input[type="text"] + i ,
+    input[type="email"] + i ,
+    input[type="password"] + i
+{
+    margin: -2.3rem 0 0.6rem 10rem;
+}}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.forgot{
+    position: relative;
+    margin: 0.3rem 0 0.2rem 10rem;
+}
+@media screen and (max-width: 768px){
+    .forgot{
+        margin: 10px;
+    }
+}
+.forgot a{
+    font-size: 18px;
+    color: #3AAFA9;
+}
+
+.sign-In{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+.form-container.sign-In h2{
+    color: #3AAFA9;
+}
+.container.active .sign-In{
+    transform: translateX(100%);
+}
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+.form-container.sign-up h2{
+    color: #3AAFA9;
+}
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+@keyframes move{
+    0% , 49.99%
+    {
+        opacity: 0;
+        z-index: 1;
+    }
+    50% , 100%
+    {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.social-icons{
+    margin: 20px 0;
+}
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #232222;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+.toggle-container{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 150px 0 0 100px;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000;
+}
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 10px 0;
+}
+.toggle{
+    background-color: #3AAFA9;
+    height: 100%;
+    background: linear-gradient(to right #DEF2F1 #3AAFA9);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.container.active .toggle{
+    transform: translateX(50%);
+}
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+
+}
+.toggle-left{
+    transform: translateX(-200%);
+}
+.container.active .toggle-left{
+    transform: translateX(0);
+} 
+.toggle-right{
+    transform: translateX(0);
+    right: 0;
+}
+.container.active .toggle-right{
+    transform: translateX(200%);
+} 
+.logo{
+    position: absolute;
+}
+.logo-left{
+    transform: translateX(-50%);
+    top: -2%;
+    left: -6%;
+}
+.container.active .logo-left{
+    transform: translateX(50%);
+}
+
+.logo-right{
+    transform: translateX(-50%);
+    top: -2%;
+    left: 91%;
+}
+.container.active .logo-right{
+    transform: translateX(50%);
+    
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+}

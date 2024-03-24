@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Animation</title>
+    <link rel="stylesheet" href="D:\FYP\form\form_Animation.css">
+</head>
+<body>
+    <div class="container" id="container">
+
+        <div class="form-container sign-up">
+            <form>
+                <h2>Create Account</h2>
+                    <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+                <input type="text" placeholder="Name">
+                    <i class="fa-regular fa-user"></i>
+
+                <input type="email" placeholder="Email">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input type="password" placeholder="Password">
+                    <i class="fa-solid fa-lock"></i>
+
+                <input type="text" placeholder="University">
+                 <i class="fa-solid fa-building-columns"></i>
+                        <button>SIGN UP</button>
+            </form>
+        </div>
+
+                <!--SignIN-->
+        <div class="form-container sign-In">
+            <form>
+                <h2>Sign in To Edufy</h2>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+                <input type="email" placeholder="Email"><i class="fa-regular fa-envelope"></i>
+                <input type="password" placeholder="Password"><i class="fa-solid fa-lock"></i>
+                 <div class="forgot">
+                    <a href="D:\FYP\form\forgotPasscode.html"> Forgot password?</a> 
+                </div>
+                        <button>SIGN IN</button>
+            </form>
+        </div>
+
+        <!--Toggle container-->
+        <div class="toggle-container">
+            
+            <div class="toggle">
+
+                
+                <div class="logo logo-left">
+                    <img src="D:\edufy.jpeg" alt=""></div>
+
+                    <div class="logo logo-right">
+                        <img src="D:\edufy.jpeg" alt=""></div>
+               
+
+                <div class="toggle-panel toggle-left">
+                    <h1>WELCOME BACK!</h1>
+                    <p>To keep connected with us please login with your personal information</p>
+                    <button class="hidden" id="login">SIGN IN</button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>HELLO, FRIENDS!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="hidden" id="register">SIGN UP</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/c3c57f15c6.js" crossorigin="anonymous"></script>
+    <script src="D:\FYP\form\form_Animation.js"></script>
+</body>
+</html>
